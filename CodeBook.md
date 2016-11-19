@@ -28,7 +28,7 @@ As stated above, the Raw Data has 561 columns in each of the two sets of data - 
 4. The activities in the data set have descriptive names. (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)<br>
 
 ## Analysis Done
-The R script performs following analysis on the Raw Data to yield the Tidy Data:
+The R script performs following analysis on the Raw Data to yield the Tidy Data:<br>
 1. Loads the required packages - tidyr and dplyr<br>
 2. Downloads and unzips the files.<br>
 3. Reads the required tables into R.<br>
