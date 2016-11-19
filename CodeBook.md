@@ -45,14 +45,14 @@ The R script performs following analysis on the Raw Data to yield the Tidy Data:
 10. Obtains mean for each column grouped by Activity_Name.
 11. Splits the Activity_Name back into SubjectID and ActivityName. This is essential to ensure that each column comprises of one variable only (definition of Tidy Data).
 12. Sorts data first by SubjectID and then by ActivityName.
-13. Write the dataframe into a separate text file as �TidyDataSet.txt�.
+13. Write the dataframe into a separate text file as `TidyDataSet.txt`.
 
 ## Description of the variables
 First two columns of the tidy data comprise:
 * **SubjectID**: Identifies the subject who performed the activity for each feature vector. It ranges from 1-30
 * **ActivityName**: Identifies the activity to which the feature vector corresponds
 
-Other variables follow a nomenclature that makes them descriptive. Each variable denotes mean of  SubjectID � AcitivityName pair. Given below are details about various elements of variable names:
+Other variables follow a nomenclature that makes them descriptive. Each variable denotes mean of  SubjectID - AcitivityName pair. Given below are details about various elements of variable names:
 * **'t'**: Time domain signals
 * **'f'**: Frequency domain signals (value obtained by applying Fast Fourier Transform to time domain signals)
 * **Body**: Body component of the signal (eg. BodyAcc denotes body component of acceleration signal)
@@ -64,7 +64,7 @@ Other variables follow a nomenclature that makes them descriptive. Each variable
 * **mean()**: Mean value
 * **std()**: Standard deviation
 * **meanFreq()**: Weighted average of the frequency components 
-* **-XYZ**: Suffixes to denote three axial signals in �X, �Y and �Z directions
+* **-XYZ**: Suffixes to denote three axial signals in -X, -Y and -Z directions
 
 A complete list of variables in the tidy dataset is given below:
 
