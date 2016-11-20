@@ -1,5 +1,5 @@
 ## About the Raw Data
-The data is on 'Human Activity Recognition Using Smartphones Data Set'. Raw Data is downloaded from the UCI Machine Learning Repository. As the document reveals, the raw data was obtained from 30 subjects, each performing six activities while wearing a smart phone (Samsung Galaxy S II) on their waist. The embedded accelerometer and gyroscope captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The data was divided into two sets: training and test sets. Further computation was done on each of the obtained values thereby generating new feature elements. Thus, for each record, following are provided:
+The data is on `Human Activity Recognition Using Smartphones Data Set`. Raw Data is downloaded from the UCI Machine Learning Repository. As the document reveals, the raw data was obtained from 30 subjects, each performing six activities while wearing a smart phone (Samsung Galaxy S II) on their waist. The embedded accelerometer and gyroscope captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The data was divided into two sets: training and test sets. Further computation was done on each of the obtained values thereby generating new feature elements. Thus, for each record, following are provided:
 
 * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 * Triaxial Angular velocity from the gyroscope. 
@@ -7,24 +7,25 @@ The data is on 'Human Activity Recognition Using Smartphones Data Set'. Raw Data
 * Its activity label. 
 * An identifier of the subject who carried out the experiment.
 
-A full description is given on the [UCI website.](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+A full description is given on the [UCI website](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 The downloaded data comprises the following files that are useful for our project:
 
-* 'README.txt': Gives detail about the dataset. 
-* 'features_info.txt': Shows information about the variables used on the feature vector.
-* 'features.txt': Gives a list of all features.
-* 'activity_labels.txt': Links the class labels with their activity name.
-* 'train/X_train.txt': Training set.
-* 'train/y_train.txt': Training labels.
-* 'test/X_test.txt': Test set.
-* 'test/y_test.txt': Test labels.
-* 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-* 'train/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+* `README.txt`: Gives detail about the dataset. 
+* `features_info.txt`: Shows information about the variables used on the feature vector.
+* `features.txt`: Gives a list of all features.
+* `activity_labels.txt`: Links the class labels with their activity name.
+* `train/X_train.txt`: Training set.
+* `train/y_train.txt`: Training labels.
+* `test/X_test.txt`: Test set.
+* `test/y_test.txt`: Test labels.
+* `train/subject_train.txt`: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+* `train/subject_test.txt`: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 **Note:** Each feature vector is a row in the text file. Moreover, features are normalized and bounded within [-1,1].
 
 ## About the Tidy Data
 As stated above, the Raw Data has 561 columns in each of the two sets of data - train dataset and test dataset. The desired tidy data (which the given R script obtains) has the following feature:
+
 * The two datasets are merged together.
 * Tidy dataset comprises average of mean and standard deviation values for each subject-activity pair. 
 * Each Column has a descriptive name.
@@ -32,22 +33,24 @@ As stated above, the Raw Data has 561 columns in each of the two sets of data - 
 
 ## Description of the variables
 First two columns of the tidy data comprise:
+
 * **SubjectID**: Identifies the subject who performed the activity for each feature vector. It ranges from 1-30
 * **ActivityName**: Identifies the activity to which the feature vector corresponds
 
-Other variables follow a nomenclature that makes them descriptive. Each variable denotes mean of  SubjectID - AcitivityName pair. Given below are details about various elements of variable names:
-* **'t'**: Time domain signals
-* **'f'**: Frequency domain signals (value obtained by applying Fast Fourier Transform to time domain signals)
-* **Body**: Body component of the signal (eg. BodyAcc denotes body component of acceleration signal)
-* **Gravity**: Gravity component of the signal
-* **Acc**: Linear acceleration signal (value obtained from accelerometer)
-* **Gyro**: Angular velocity signal (value obtained from gyroscope)
-* **Jerk**: Time derivative of the signal
-* **Mag**: Magnitude of the three dimensional signal
-* **mean()**: Mean value
-* **std()**: Standard deviation
-* **meanFreq()**: Weighted average of the frequency components 
-* **-XYZ**: Suffixes to denote three axial signals in -X, -Y and -Z directions
+Other variables follow a nomenclature that makes them descriptive. Each variable is the average of all observations for a given SubjectID - AcitivityName pair. Given below are details about various elements of variable names (nomenclature):
+
+* **`t`**: Time domain signals
+* **`f`**: Frequency domain signals (value obtained by applying Fast Fourier Transform to time domain signals)
+* **`Body`**: Body component of the signal (eg. BodyAcc denotes body component of acceleration signal)
+* **`Gravity`**: Gravity component of the signal
+* **`Acc`**: Linear acceleration signal (value obtained from accelerometer)
+* **`Gyro`**: Angular velocity signal (value obtained from gyroscope)
+* **`Jerk`**: Time derivative of the signal
+* **`Mag`**: Magnitude of the three dimensional signal
+* **`mean()`**: Mean value
+* **`std()`**: Standard deviation
+* **`meanFreq()`**: Weighted average of the frequency components 
+* **`-XYZ`**: Suffixes to denote three axial signals in -X, -Y and -Z directions
 
 A complete list of variables in the tidy dataset is given below:
 
@@ -132,4 +135,3 @@ A complete list of variables in the tidy dataset is given below:
 79. fBodyBodyGyroJerkMag-mean()
 80. fBodyBodyGyroJerkMag-std()
 81. fBodyBodyGyroJerkMag-meanFreq()
-
